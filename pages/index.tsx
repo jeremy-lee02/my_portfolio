@@ -7,7 +7,7 @@ import Skills from '../components/Skills'
 
 export default function Home() {
   return (
-    <div className='background text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0'>
+    <div className='background text-white snap-y h-screen snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin hover:scrollbar-thumb-[#00000065] scrollbar-thumb-[#0000ff6c] scrollbar-track-[#ffffffa4] scrollbar-thumb-rounded-full scrollbar-corner-white scrollbar-track-rounded-full'>
       <Head>
         <title>Jeremy's Portfolio</title>
       </Head>
