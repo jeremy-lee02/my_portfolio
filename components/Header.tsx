@@ -24,7 +24,7 @@ function Header({}: Props) {
         }}
          className='flex flex-row items-center pt-3'>
             {/* Links */}
-            <Link href={'#hero'}><button className='navButton'>Home</button></Link>
+            <Link href={'#home'}><button className='navButton'>Home</button></Link>
             <Link href={'#about'}><button className='navButton'>About</button></Link>
             {/* <Link href={'#experience'}><button className='navButton'>Experience</button></Link> */}
             <Link href={'#skills'}><button className='navButton'>Skills</button></Link>
@@ -50,7 +50,9 @@ function Header({}: Props) {
                 network='email'
                 fgColor='#d3d3d3'
                 bgColor='transparent'/>
-            <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Send Me An Email</p>
+            <Link href={'#contact'}>
+                <p className='uppercase hidden md:inline-flex text-sm text-gray-400 hover:text-white'>Send Me An Email</p>
+            </Link>
         </motion.div>
     </header>
   )

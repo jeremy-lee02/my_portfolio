@@ -1,15 +1,19 @@
 import {defineType, defineField} from 'sanity'
 
 export default defineType({
-  name: 'skills',
-  title: 'Skills',
+  name: 'projects',
+  title: 'Projects',
   type: 'document',
   fields: [
         {
-            name: "skillName",
-            title: 'Skill Name',
-            description: "Name of skill",
+            name: "projectName",
+            title: 'Project Name',
             type: "string"
+          },
+          {
+            name: 'description',
+            title: 'Description',
+            type: 'string'
           },
           {
             name: "skillImage",
@@ -19,7 +23,11 @@ export default defineType({
               hotspot: true
             }
           },
-
+          {
+            name:"url",
+            title: "Github Link",
+            type: "string"
+          }
   ]
 
 })

@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineType} from 'sanity'
 
 export default defineType({
   name: 'pageInfo',
@@ -50,12 +50,6 @@ export default defineType({
       name: "address",
       title: "Address",
       type: "string"
-    },
-    {
-      name: "social",
-      title: "Social",
-      type: "array",
-      of: [{type: "reference", to: {type: "social"}}]
     },
   ],
 })
