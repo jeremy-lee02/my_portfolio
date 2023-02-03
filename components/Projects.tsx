@@ -20,12 +20,7 @@ function Projects({projects}: Props) {
         <div className='relative w-full mt-[200px] sm:mt-0 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin hover:scrollbar-thumb-[#00000065] scrollbar-thumb-[#0000ff6c] scrollbar-track-[#ffffffa4] scrollbar-thumb scrollbar-corner-white scrollbar-track'>
             {projects?.map((project , i) => (
                 <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
-                    <motion.img 
-                    initial = {{y:-300,
-                    opacity:0}}
-                    transition = {{duration: 1.2}}
-                    whileInView = {{opacity: 1, y:0}}
-                    viewport = {{once:true}}
+                    <img 
                     src= {urlFor(project.skillImage).url()} alt="" width={600} height={375}  />
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl overflow-y-scroll lg:overflow-y-hidden'>
                         <h4 className='text-3xl font-semibold text-center'>
