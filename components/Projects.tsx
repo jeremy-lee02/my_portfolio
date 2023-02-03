@@ -21,8 +21,8 @@ function Projects({projects}: Props) {
             {projects?.map((project , i) => (
                 <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20  pt-0 md:p-44 h-screen'>
                     <img 
-                    src= {urlFor(project.skillImage).url()} alt="" width={600} height={375}  />
-                    <div className='space-y-10 px-0 md:px-10 max-w-6xl overflow-y-scroll lg:overflow-y-hidden'>
+                    src= {urlFor(project.skillImage).url()} alt="" width={400} height={375}  />
+                    <div className='space-y-10 px-0 md:px-10 max-w-6xl overflow-x-hidden overflow-y-scroll lg:overflow-y-hidden'>
                         <h4 className='text-3xl font-semibold text-center'>
                             <span className='underline decoration-[#00d5ff]'>Project {i + 1} of {projects.length}:</span>
                             <Link href={project.url}>
