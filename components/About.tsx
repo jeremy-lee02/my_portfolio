@@ -1,9 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { PageInfo } from '../typing'
+import { urlFor } from '../sanity'
 
-type Props = {}
+type Props = {
+    info: PageInfo
+}
 
-function About({}: Props) {
+function About({info}: Props) {
   return (
     <motion.div 
     initial = {{
@@ -44,17 +48,18 @@ function About({}: Props) {
             opacity: 1,
             x: 0
         }}
-        src='https://cdn.discordapp.com/attachments/864506672259792949/1055931563977736192/321565899_993401265381480_1019542828412345852_n.jpg'
+        src={urlFor(info?.profileImg).url()}
         className='-mb-20 md:mb-0 md:mt-24 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[700px]' />
-        <div className='space-y-10 px-0 md:px-10 sm:mt-7'>
+        <motion.div 
+        initial = {{y:-300,
+        opacity:0}}
+        transition = {{duration: 1.2}}
+        whileInView = {{opacity: 1, y:0}}
+        viewport = {{once:true}}
+        className='space-y-10 px-0 md:px-10 sm:mt-7'>
             <h4 className='text-4xl tracking-wide font-semibold md:hidden'>Background</h4>
-            <p className='text-base tracking-[2px]'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel praesentium explicabo corrupti ab sequi modi quo dolor 
-                officia consequuntur quae, tempore ut iure odio nihil veritatis fuga eaque unde! Cum!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel praesentium explicabo corrupti ab sequi modiquo dolor 
-                officia consequuntur quae, tempore ut iure odio nihil veritatis fuga eaque unde! Cum!
-            </p>
-        </div>
+            <p className='text-base tracking-[2px]'>{info?.backgroundInfo}</p>
+        </motion.div>
     </motion.div>
   )
 }

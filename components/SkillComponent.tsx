@@ -1,11 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-
 type Props = {
-    directionLeft?: boolean
+    directionLeft?: boolean;
+    name: string;
+    url: string
 }
 
-function Skill({directionLeft}: Props) {
+function SkillComponent({directionLeft, name, url}: Props) {
   return (
     <div className='group relative flex cursor-pointer'>
         <motion.img
@@ -21,15 +22,15 @@ function Skill({directionLeft}: Props) {
             x: 0
         }}
         className = 'rounded-full w-24 h-24 border border-gray-400 xl:w-32 xl:h-32 md:w-28 md:h-28 filter group-hover:grayscale transition duration-200 ease-in-out'
-        src= 'https://cdn.discordapp.com/attachments/864506672259792949/1057743355490074684/react.png' />
+        src= {url} />
 
         <div className='absolute opacity-0 group-hover:opacity-75 group-hover:bg-white transition duration-200 ease-in-out w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0'>
             <div className='flex items-center justify-center h-full'>
-                <p className='text-[16px] font-semibold text-black opacity-100'>React JS </p>
+                <p className='text-[14px] font-semibold text-black opacity-100'>{name}</p>
             </div>
         </div>
     </div>
   )
 }
 
-export default Skill
+export default SkillComponent

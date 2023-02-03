@@ -1,10 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import Skill from './Skill'
+import SkillComponent from './SkillComponent'
+import { Skill } from '../typing'
+import { urlFor } from '../sanity'
 
-type Props = {}
+type Props = {
+  skills: Skill[]
+}
 
-function Skills({}: Props) {
+function Skills({skills}: Props) {
   return (
     <motion.div 
     initial = {{
@@ -19,22 +23,15 @@ function Skills({}: Props) {
     className='min-h-screen relative flex flex-col text-center md:text-left xl:flex-row max-w-[2000px] justify-center xl:space-y-0 mx-auto items-center'>
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-400 text-2xl'>Skills</h3>
         <div className='grid grid-cols-4 gap-5'>
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
+          {/* Transition Left to Right */}
+          {skills?.slice(0,skills.length/2).map(item =>(
+           <SkillComponent key={item._id} name= {item.skillName} url={urlFor(item.skillImage).url()} directionLeft/> 
+          ))}
+          {/* Transition Right to Left */}
+          {skills?.slice(skills.length/2, skills.length).map(item =>(
+           <SkillComponent key={item._id} name= {item.skillName} url={urlFor(item.skillImage).url()}  /> 
+          ))}
+
         </div>
     </motion.div>
   )

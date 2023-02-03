@@ -30,27 +30,27 @@ export default function Home({pageInfo, skills, projects, socials}: Props) {
       <Header />
       {/* Hero */}
       <section id='home' className='snap-start'>
-        <Hero />
+        <Hero pageInfo={pageInfo} socials ={socials} />
       </section>
 
       {/* About */}
       <section id='about' className='snap-center'>
-        <About />
+        <About info={pageInfo} />
       </section>
 
       {/* Skills */}
       <section id='skills' className='snap-start'>
-        <Skills />
+        <Skills skills={skills}/>
       </section>
 
       {/* Projects */}
       <section id='projects' className='snap-start'>
-        <Projects />
+        <Projects projects={projects} />
       </section>
 
       {/* Contact */}
       <section id='contact' className='snap-start'>
-        <Contact />
+        <Contact info={pageInfo} />
       </section>
     
     </div>
@@ -63,7 +63,7 @@ export const getStaticProps: GetStaticProps<Props> = async ()=>{
   const projects: Project[] = await fetchProject();
   const socials: Social[] = await fetchSocials();
 
-  console.log(pageInfo.name)
+  console.log(pageInfo)
 
   return {
     props:{
