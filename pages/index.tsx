@@ -8,10 +8,8 @@ import Hero from '../components/Hero'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import { PageInfo, Skill, Project, Social } from '../typing'
-import { fetchInfo } from '../utils/fetchInfo'
-import { fetchProject } from '../utils/fetchProject'
-import { fetchSkills } from '../utils/fetchSkills'
-import { fetchSocials } from '../utils/fetchSocial'
+import { sanityClient } from '../sanity'
+
 
 type Props = {
   pageInfo: PageInfo;
@@ -58,12 +56,20 @@ export default function Home({pageInfo, skills, projects, socials}: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async ()=>{
-  const pageInfo:PageInfo = await fetchInfo();
-  const skills: Skill[] = await fetchSkills();
-  const projects: Project[] = await fetchProject();
-  const socials: Social[] = await fetchSocials();
 
-  console.log(pageInfo)
+  const queryInfo = '*[_type == "pageInfo"][0]'
+  const pageInfo: PageInfo = await sanityClient.fetch(queryInfo)
+
+  const querySkills = '*[_type == "skills"]'
+  const skills: Skill[] = await sanityClient.fetch(querySkills)
+
+
+  const queryProject = '*[_type == "projects"]'
+  const projects: Project[] = await sanityClient.fetch(queryProject)
+
+
+  const querySocial = '*[_type == "socials"]'
+  const socials: Social[] = await sanityClient.fetch(querySocial)
 
   return {
     props:{
