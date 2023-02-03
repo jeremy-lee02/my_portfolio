@@ -22,9 +22,9 @@ function Contact({info}: Props) {
 
     }
   return (
-    <div className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-400 text-2xl'>Contact</h3>
-        <div className='flex flex-col space-y-10'>
+    <div className='h-screen relative flex overflow-x-scroll lg:overflow-x-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
+        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-400 text-2xl text-center'>Contact</h3>
+        <div className='flex flex-col space-y-10 absolute top-40'>
             <h4 className='text-4xl font-semibold text-center'>Contact me for any information.</h4>
             <div className='space-y-10'>
                 <div className='flex items-center space-x-5 justify-center'>

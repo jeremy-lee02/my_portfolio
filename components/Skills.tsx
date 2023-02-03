@@ -20,16 +20,11 @@ function Skills({skills}: Props) {
     transition = {{
       duration:1.5
     }}
-    className='min-h-screen relative flex flex-col text-center md:text-left xl:flex-row max-w-[2000px] justify-center xl:space-y-0 mx-auto items-center'>
+    className='min-h-screen relative flex flex-col text-center md:text-center xl:flex-col max-w-[2000px] justify-center xl:space-y-0 mx-auto items-center'>
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-400 text-2xl'>Skills</h3>
-        <div className='grid grid-cols-4 gap-5'>
-          {/* Transition Left to Right */}
-          {skills?.slice(0,skills.length/2).map(item =>(
-           <SkillComponent key={item._id} name= {item.skillName} url={urlFor(item.skillImage).url()} directionLeft/> 
-          ))}
-          {/* Transition Right to Left */}
-          {skills?.slice(skills.length/2, skills.length).map(item =>(
-           <SkillComponent key={item._id} name= {item.skillName} url={urlFor(item.skillImage).url()}  /> 
+        <div className='grid grid-cols-3 gap-[8px] mt-10'>
+          {skills?.map(item =>(
+           <SkillComponent key={item._id} name= {item.skillName} url={urlFor(item.skillImage).url()}/> 
           ))}
 
         </div>

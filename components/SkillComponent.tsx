@@ -1,26 +1,27 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 type Props = {
-    directionLeft?: boolean;
     name: string;
     url: string
 }
 
-function SkillComponent({directionLeft, name, url}: Props) {
+function SkillComponent({ name, url}: Props) {
   return (
-    <div className='group relative flex cursor-pointer'>
-        <motion.img
-        initial = {{
-            x: directionLeft? -200: 200,
-            opacity: 0
-        }}
-        transition = {{
-            duration: .75,
-        }}
-        whileInView = {{
-            opacity: 1,
-            x: 0
-        }}
+    <motion.div 
+    className='group relative flex cursor-pointer'
+    initial = {{
+        y: -200,
+        opacity: 0
+    }}
+    transition = {{
+        duration: .75,
+    }}
+    whileInView = {{
+        opacity: 1,
+        x: 0,
+        y: 0
+    }}>
+        <img
         className = 'rounded-full w-24 h-24 border border-gray-400 xl:w-32 xl:h-32 md:w-28 md:h-28 filter group-hover:grayscale transition duration-200 ease-in-out'
         src= {url} />
 
@@ -29,7 +30,7 @@ function SkillComponent({directionLeft, name, url}: Props) {
                 <p className='text-[14px] font-semibold text-black opacity-100'>{name}</p>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
