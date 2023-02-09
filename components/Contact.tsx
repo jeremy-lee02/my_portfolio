@@ -1,5 +1,4 @@
 import React from 'react'
-import {PhoneIcon, MapPinIcon, EnvelopeIcon, ClipboardIcon } from '@heroicons/react/24/solid';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { PageInfo } from '../typing';
 
@@ -22,7 +21,7 @@ function Contact({info}: Props) {
 
     }
   return (
-    <div className='flex items-start justify-center mt-32 '>
+    <div className='flex items-start justify-center mt-24 '>
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit'>
             <div className='flex space-x-2'>
                 <input {...register('name')} className='contactInput' placeholder='Name'  type='text' />

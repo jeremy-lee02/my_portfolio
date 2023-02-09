@@ -5,7 +5,6 @@ import {Open_Sans, Roboto_Serif} from '@next/font/google'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { PageInfo } from '../typing'
-import { fetchInfo } from '../utils/fetchInfo'
 import toast, { Toaster } from 'react-hot-toast';
 import { sanityClient } from '../sanity'
 
@@ -20,8 +19,6 @@ type Props = AppProps & {
 
 
 export default function App({ Component, pageProps, result }: Props) {
-  
-  const info = fetchInfo();
   return(
     <div className='background'>
       <Head>
