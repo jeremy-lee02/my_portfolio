@@ -31,7 +31,6 @@ function Header({}: Props) {
             <Link href={'/projects'}><button className='navButton'>Projects</button></Link>
 
         </motion.div>
-        <Link href={'/contact'}>
         <motion.div
         initial= {{
             x:500,
@@ -47,10 +46,13 @@ function Header({}: Props) {
             duration: 1.2,
         }}
         className='flex flex-row gap-3 items-center text-gray-300 cursor-pointer'>
-            <EnvelopeIcon className='text-gray w-7 h-7 hover:text-white' />
-            <p className='uppercase hidden md:inline-flex text-sm text-gray-400 hover:text-white'>Send Me An Email</p>
+            <Link href={'/contact'}>
+                <EnvelopeIcon className='text-gray w-7 h-7 hover:text-white' />
+            </Link>
+            <Link href={'/contact'}>
+                <p className='uppercase hidden md:inline-flex text-sm text-gray-400 hover:text-white'>Send Me An Email</p>
+            </Link>
         </motion.div>
-        </Link>
     </header>
   )
 }
