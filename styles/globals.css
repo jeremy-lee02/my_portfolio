@@ -12,7 +12,7 @@
         @apply px-3 py-1  text-sm tracking-[1.5px] text-gray-400 transition-all hover:text-white
     }
     .contactInput {
-        @apply outline-none bg-[#ffffff28] rounded-sm border-b px-6 py-4 border-[#ffffff28] text-gray-400
+        @apply outline-none bg-[#ffffff28] rounded-sm border-b px-2 py-4 border-[#ffffff28] text-gray-400
          placeholder-gray-500 transition-all focus:border-[#ffffff69] focus:text-gray-100 hover:border-[#ffffff69]
     }
 }

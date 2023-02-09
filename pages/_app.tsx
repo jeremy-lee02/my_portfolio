@@ -20,7 +20,7 @@ type Props = AppProps & {
 
 export default function App({ Component, pageProps, result }: Props) {
   return(
-    <div className='background'>
+    <div className='background w-full'>
       <Head>
         <title>Jeremy's Portfolio</title>
       </Head>
