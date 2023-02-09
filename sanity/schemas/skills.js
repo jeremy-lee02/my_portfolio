@@ -10,7 +10,7 @@ export default defineType({
             title: 'Skill Name',
             description: "Name of skill",
             type: "string"
-          },
+        },
           {
             name: "skillImage",
             title: "Skill Image",

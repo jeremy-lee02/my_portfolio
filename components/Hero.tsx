@@ -34,11 +34,9 @@ function Hero({pageInfo, socials}: Props) {
     transition = {{
         duration: 1.2,
     }}
-    className='min-h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
-        <img
-            className='relative rounded-full h-40 w-40 mx-auto object-cover'
+    className='flex flex-col space-y-8 text-center overflow-hidden'>
+        <img className='relative rounded-full h-40 w-40 mx-auto object-cover'
             src={urlFor(pageInfo?.heroImage).url()} />
-        
         <div className='z-20'>
             <h2 className='text-2xl uppercase text-gray-400 tracking-[20px] pb-5'>{pageInfo?.name}</h2>
             <h1 className='text-4xl lg:text-5xl font-semibold'>

@@ -2,6 +2,7 @@ import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import {EnvelopeIcon } from '@heroicons/react/24/solid';
 
 type Props = {}
 
@@ -24,13 +25,13 @@ function Header({}: Props) {
         }}
          className='flex flex-row items-center pt-3'>
             {/* Links */}
-            <Link href={'#home'}><button className='navButton'>Home</button></Link>
-            <Link href={'#about'}><button className='navButton'>About</button></Link>
-            {/* <Link href={'#experience'}><button className='navButton'>Experience</button></Link> */}
-            <Link href={'#skills'}><button className='navButton'>Skills</button></Link>
-            <Link href={'#projects'}><button className='navButton'>Projects</button></Link>
-            
+            <Link href={'/'}><button className='navButton'>Home</button></Link>
+            <Link href={'/about'}><button className='navButton'>About</button></Link>
+            <Link href={'/skills'}><button className='navButton'>Skills</button></Link>
+            <Link href={'/projects'}><button className='navButton'>Projects</button></Link>
+
         </motion.div>
+        <Link href={'/contact'}>
         <motion.div
         initial= {{
             x:500,
@@ -45,15 +46,11 @@ function Header({}: Props) {
         transition = {{
             duration: 1.2,
         }}
-        className='flex flex-row items-center text-gray-300 cursor-pointer'>
-            <SocialIcon 
-                network='email'
-                fgColor='#d3d3d3'
-                bgColor='transparent'/>
-            <Link href={'#contact'}>
-                <p className='uppercase hidden md:inline-flex text-sm text-gray-400 hover:text-white'>Send Me An Email</p>
-            </Link>
+        className='flex flex-row gap-3 items-center text-gray-300 cursor-pointer'>
+            <EnvelopeIcon className='text-gray w-7 h-7 hover:text-white' />
+            <p className='uppercase hidden md:inline-flex text-sm text-gray-400 hover:text-white'>Send Me An Email</p>
         </motion.div>
+        </Link>
     </header>
   )
 }
