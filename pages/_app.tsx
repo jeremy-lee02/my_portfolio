@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import { PageInfo } from '../typing'
 import { fetchInfo } from '../utils/fetchInfo'
 import toast, { Toaster } from 'react-hot-toast';
+import { sanityClient } from '../sanity'
 
 
 
@@ -37,6 +38,7 @@ export default function App({ Component, pageProps, result }: Props) {
 }
 
 App.getInitialProps = async () => {
-  const result = await fetchInfo();
+  const queryInfo = '*[_type == "pageInfo"][0]'
+  const result:PageInfo = await sanityClient.fetch(queryInfo)
   return {result}
 }

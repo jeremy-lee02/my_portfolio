@@ -23,7 +23,6 @@ function contact({pageInfo}: Props) {
 export default contact
 
 export const getStaticProps: GetStaticProps<Props> = async ()=>{
-
   const queryInfo = '*[_type == "pageInfo"][0]'
   const pageInfo: PageInfo = await sanityClient.fetch(queryInfo)
   return {
