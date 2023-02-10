@@ -37,12 +37,11 @@ export default function App({ Component, pageProps, result }: Props) {
         <title>Jeremy's Portfolio</title>
       </Head>
       <Header />
-      <main className={`${roboto_serif.className} text-white min-h-screen `}>
+      <main className={`${roboto_serif.className} text-white min-h-screen flex flex-col justify-evenly`}>
         <Toaster />
         <Component {...pageProps} />
       </main>
-      {isFooter?<Footer info={result} />: null}
-      
+        {isFooter?<Footer info={result} />: null}
     </div>
   ) 
 }

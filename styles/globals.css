@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+html,
+body{
+width: 100%;
+height: 100%;
+overflow-x: hidden;
 }
 
 .background{
@@ -16,7 +17,8 @@
     overflow-y: scroll;
 }
 .app-container::-webkit-scrollbar{
-    width: 12px;
+    margin-left: 10px;
+    width: 8px;
 }
 .app-container::-webkit-scrollbar-track{
     box-shadow: inset 0 0 5px rgb(119, 117, 117); 
@@ -30,9 +32,16 @@
     background: #00000065;
 }
 
+@media screen and (max-width: 768px) {
+    .app-container::-webkit-scrollbar{
+        margin-left: 10px;
+        width: 2px;
+    }
+  }
+
 @layer components {
     .navButton{
-        @apply px-3 py-1  text-sm tracking-[1.5px] text-gray-400 transition-all hover:text-white
+        @apply px-3 py-1 text-sm tracking-[1.5px] text-gray-400 transition-all hover:text-white
     }
     .contactInput {
         @apply outline-none bg-[#ffffff28] rounded-sm border-b px-2 py-4 border-[#ffffff28] text-gray-400
