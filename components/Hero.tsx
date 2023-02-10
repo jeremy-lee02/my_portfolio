@@ -12,8 +12,7 @@ type Props = {
 
 function Hero({pageInfo, socials}: Props) {
     const [text, count] = useTypewriter({
-        words: [`Hello, My name is ${pageInfo?.name} (${pageInfo?.nickName})`,
-        "Fresher Developer 💻, Business Analyst 👨‍💼",
+        words: ["Fresher Developer 💻, Business Analyst 👨‍💼",
         "In Love With Mechanical Keyboards 🤍"],
         loop: true,
         delaySpeed: 1500
@@ -34,7 +33,7 @@ function Hero({pageInfo, socials}: Props) {
     transition = {{
         duration: 1.2,
     }}
-    className='flex flex-col space-y-8 text-center overflow-hidden mt-[100px]'>
+    className='flex flex-col space-y-8 text-center overflow-hidden mt-[100px] items-center justify-center'>
         <img className='relative rounded-full h-40 w-40 mx-auto object-cover'
             src={urlFor(pageInfo?.heroImage).url()} />
         <div>

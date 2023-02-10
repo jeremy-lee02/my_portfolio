@@ -30,12 +30,14 @@ export default function App({ Component, pageProps, result }: Props) {
   },[router.asPath])
   
   return(
-    <div className='background w-full '>
+    <div className='background'>
       <Head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Jeremy's Portfolio</title>
       </Head>
       <Header />
-      <main className={`${roboto_serif.className}  text-white min-h-screen`}>
+      <main className={`${roboto_serif.className} text-white min-h-screen `}>
         <Toaster />
         <Component {...pageProps} />
       </main>

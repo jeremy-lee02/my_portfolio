@@ -1,7 +1,7 @@
 import React from 'react'
 import About from '../components/About'
 import { motion } from 'framer-motion'
-import { PageInfo, Skill, Project, Social } from '../typing'
+import { PageInfo } from '../typing'
 import { sanityClient } from '../sanity'
 import { GetStaticProps } from 'next'
 
@@ -16,7 +16,6 @@ function about({pageInfo}: Props) {
             initial = {{
                 x: -200,
                 opacity: 0
-
             }}
             transition = {{
                 duration: 1.2,

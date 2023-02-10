@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .background{
     background: rgb(8,4,61);
     background: linear-gradient(173deg, rgba(8,4,61,1) 15%, rgba(25,25,191,1) 47%, rgba(0,212,255,1) 96%);
@@ -10,7 +16,6 @@
     overflow-y: scroll;
 }
 .app-container::-webkit-scrollbar{
-    margin-left: 10px;
     width: 12px;
 }
 .app-container::-webkit-scrollbar-track{
