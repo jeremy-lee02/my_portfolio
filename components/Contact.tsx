@@ -3,11 +3,6 @@ import {PhoneIcon, MapPinIcon, EnvelopeIcon, ClipboardIcon } from '@heroicons/re
 import { PageInfo } from '../typing';
 import useCopy from '../hook/useCopy';
 
-
-
-
-
-
 type Props = {
     info: PageInfo
 }

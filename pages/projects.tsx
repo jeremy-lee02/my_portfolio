@@ -1,9 +1,7 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import { Project } from '../typing'
 import { sanityClient } from '../sanity'
 import { GetStaticProps } from 'next'
-import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 
 type Props = {

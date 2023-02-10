@@ -1,6 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { PageInfo, Skill, Project, Social } from '../typing'
+import { Skill } from '../typing'
 import { sanityClient } from '../sanity'
 import { GetStaticProps } from 'next'
 import Skills from '../components/Skills'

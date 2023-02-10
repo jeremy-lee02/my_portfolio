@@ -34,7 +34,7 @@ function Hero({pageInfo, socials}: Props) {
     transition = {{
         duration: 1.2,
     }}
-    className='flex flex-col space-y-8 text-center overflow-hidden mt-[150px]'>
+    className='flex flex-col space-y-8 text-center overflow-hidden mt-[100px]'>
         <img className='relative rounded-full h-40 w-40 mx-auto object-cover'
             src={urlFor(pageInfo?.heroImage).url()} />
         <div>

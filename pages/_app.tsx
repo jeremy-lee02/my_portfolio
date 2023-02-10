@@ -5,12 +5,10 @@ import {Open_Sans, Roboto_Serif} from '@next/font/google'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { PageInfo } from '../typing'
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import { sanityClient } from '../sanity'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-
-
 
 
 const open_sans = Open_Sans({subsets:['latin']})
