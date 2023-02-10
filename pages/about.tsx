@@ -11,7 +11,7 @@ type Props = {
 
 function about({pageInfo}: Props) {
   return (
-    <div className=''>
+    <div>
         <motion.h3 
             initial = {{
                 x: -200,

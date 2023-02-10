@@ -11,7 +11,7 @@ type Props = {
 
 export default function Home({pageInfo, socials}: Props) {
   return (
-    <div className='max-w-full'>
+    <div className='my-[150px]'>
       <Hero pageInfo={pageInfo} socials = {socials} />
     </div>
   )
