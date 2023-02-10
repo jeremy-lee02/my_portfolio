@@ -17,7 +17,7 @@ type Props = {
 
 export default function Home({pageInfo, socials}: Props) {
   return (
-    <div className='min-h-[879px] flex items-center justify-center text-white scrollbar-thin hover:scrollbar-thumb-[#00000065] scrollbar-thumb-[#0000ffb6] scrollbar-track-[#ffffffa4] scrollbar-thumb scrollbar-corner-white scrollbar-track'>
+    <div>
       <Hero pageInfo={pageInfo} socials = {socials} />
     </div>
   )

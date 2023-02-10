@@ -1,31 +1,38 @@
 import React from 'react'
-import { useForm, SubmitHandler } from 'react-hook-form';
+import {PhoneIcon, MapPinIcon, EnvelopeIcon, ClipboardIcon } from '@heroicons/react/24/solid';
 import { PageInfo } from '../typing';
+import useCopy from '../hook/useCopy';
 
 
-type Inputs = {
-    name: string,
-    email: string,
-    subject: string,
-    message: string
+
+
+
+
+type Props = {
+    info: PageInfo
 }
 
-function Contact() {
-    const {register,handleSubmit} = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = (formData) => {
-        window.location.href = `mailto:letrungtin2712@gmail.com?subject=${formData.subject}&body=Hello, my name is ${formData.name}. ${formData.message}`
+function Contact({info}: Props) {
 
-    }
+    const [value, copy] = useCopy();
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-2 px-6 mt-20'>
-        <div className='flex justify-evenly gap-3'>
-            <input {...register('name')} className='contactInput w-full' placeholder='Name'  type='text' />
-            <input {...register('email')} className='contactInput w-full' placeholder='Email' type='email' />
+    <div className='flex justify-center items-center text-white mx-auto pt-[30px]'>
+        <div className='flex flex-col gap-20'>
+            <div className='flex items-center space-x-5 justify-center'>
+                <PhoneIcon className='md:h-9 md:w-9 h-7 w-7 animate-pulse text-gray-500' />
+                <p className='tracking-[3px] md:text-xl'>{info?.phone}</p>
+            </div>
+            <div className='flex items-center space-x-5 justify-center'>
+                <MapPinIcon className='md:h-9 md:w-9 h-7 w-7 animate-pulse text-gray-500 '  />
+                <p className='tracking-[3px] md:text-xl'>{info?.address}</p>
+            </div>
+            <div className='flex items-center space-x-2 justify-center'>
+                <EnvelopeIcon className='md:h-9 md:w-9 h-7 w-7 animate-pulse text-gray-500'  />
+                <p className='tracking-[3px] md:text-xl'>{info?.email}</p>
+                <ClipboardIcon className='h-5 w-5 cursor-pointer hover:text-white text-gray-500' onClick={()=> copy(info?.email)} />
+            </div>
         </div>
-        <input {...register('subject')} type='text' placeholder='Subject' className='contactInput'/>
-        <textarea {...register('message')} className='contactInput' placeholder='Message' />
-        <button type='submit' className='bg-[#00d5ff98] py-5 rounded text-white font-semibold text-lg'>Send Email</button>
-    </form>
+    </div>
 
   )
 }

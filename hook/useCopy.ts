@@ -18,7 +18,7 @@ function useCopy(): [CopiedValue, CopyFn] {
     try {
       await navigator.clipboard.writeText(text)
       setCopiedText(text)
-      toast.success(`'${text} has copied to the clipboard'`)
+      toast.success(`'${text}' Copied`)
       return true
     } catch (error) {
       console.warn('Copy failed', error)

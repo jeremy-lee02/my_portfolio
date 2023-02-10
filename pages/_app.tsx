@@ -7,6 +7,9 @@ import Footer from '../components/Footer'
 import { PageInfo } from '../typing'
 import toast, { Toaster } from 'react-hot-toast';
 import { sanityClient } from '../sanity'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+
 
 
 
@@ -19,17 +22,27 @@ type Props = AppProps & {
 
 
 export default function App({ Component, pageProps, result }: Props) {
+  const [isFooter, setIsFooter] = useState(true);
+  const router = useRouter()
+
+  useEffect(()=>{
+    if(router.asPath.split('/')[1] === "contact"){
+      setIsFooter(false)
+    }else{setIsFooter(true)}
+  },[router.asPath])
+  
   return(
-    <div className='background w-full'>
+    <div className='background w-full '>
       <Head>
         <title>Jeremy's Portfolio</title>
       </Head>
       <Header />
-      <main className={roboto_serif.className}>
+      <main className={`${roboto_serif.className}  text-white min-h-screen`}>
         <Toaster />
         <Component {...pageProps} />
       </main>
-      <Footer info={result}  />
+      {isFooter?<Footer info={result} />: null}
+      
     </div>
   ) 
 }

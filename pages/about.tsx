@@ -11,7 +11,7 @@ type Props = {
 
 function about({pageInfo}: Props) {
   return (
-    <div className='min-h-[879px] text-white overflow-y-scroll scrollbar-thin hover:scrollbar-thumb-[#00000065] scrollbar-thumb-[#0000ffb6] scrollbar-track-[#ffffffa4] scrollbar-thumb scrollbar-corner-white scrollbar-track'>
+    <div className=''>
         <motion.h3 
             initial = {{
                 x: -200,

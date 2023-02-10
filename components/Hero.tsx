@@ -12,7 +12,7 @@ type Props = {
 
 function Hero({pageInfo, socials}: Props) {
     const [text, count] = useTypewriter({
-        words: [`Hello, My name is ${pageInfo?.name} (${pageInfo?.nickName}) 🥳`,
+        words: [`Hello, My name is ${pageInfo?.name} (${pageInfo?.nickName})`,
         "Fresher Developer 💻, Business Analyst 👨‍💼",
         "In Love With Mechanical Keyboards 🤍"],
         loop: true,
@@ -34,10 +34,10 @@ function Hero({pageInfo, socials}: Props) {
     transition = {{
         duration: 1.2,
     }}
-    className='flex flex-col space-y-8 text-center overflow-hidden'>
+    className='flex flex-col space-y-8 text-center overflow-hidden mt-[150px]'>
         <img className='relative rounded-full h-40 w-40 mx-auto object-cover'
             src={urlFor(pageInfo?.heroImage).url()} />
-        <div className='z-20'>
+        <div>
             <h2 className='text-2xl uppercase text-gray-400 tracking-[20px] pb-5'>{pageInfo?.name}</h2>
             <h1 className='text-4xl lg:text-5xl font-semibold'>
                 <span className='tracking-[3px]'>{text}</span>
