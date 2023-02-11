@@ -17,7 +17,7 @@ function Projects({projects}: Props) {
     whileInView={{opacity:1}}
     transition = {{duration:1.5}}
     className='relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
-        <div className='relative w-full flex overflow-x-scroll snap-x snap-mandatory z-20 scrollbar-thin hover:scrollbar-thumb-[#00000065] scrollbar-thumb-[#0000ffb6] scrollbar-track-[#ffffffa4] scrollbar-thumb scrollbar-corner-white scrollbar-track'>
+        <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin hover:scrollbar-thumb-[#00000065] scrollbar-thumb-[#0000ffb6] scrollbar-track-[#ffffffa4] scrollbar-thumb scrollbar-corner-white scrollbar-track'>
             {projects?.map((project , i) => (
                     <div className='flex flex-col mt-10'>
                         <h4 className='text-3xl font-semibold text-center'>
