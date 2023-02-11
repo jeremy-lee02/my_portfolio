@@ -34,24 +34,6 @@ function Projects({projects}: Props) {
                         </div>
                     </div>
             ))}
-                        {/* {projects?.map((project , i) => (
-                    <div className='grid grid-row-2 mt-10'>
-                        <div>
-                            <h4 className='text-3xl font-semibold text-center'>
-                                    <span className='underline decoration-[#00d5ff]'>Project {i + 1} of {projects.length}:</span>
-                                    <Link href={project.url}>
-                                        <span className='cursor-pointer hover:text-[#00d5ff]'> {project.projectName}</span> 
-                                    </Link>
-                            </h4>
-                        </div>
-                        <div key={project._id} className='w-screen snap-center grid grid-cols-2 space-y-5 items-center justify-center px-16 h-full'>
-                            <img src= {urlFor(project.skillImage).url()} width={300} height={370} alt=""  className='max-w-full' />
-                            <div className='grid px-0 md:px-8 max-w-full h-1/2 overflow-y-auto'>
-                                <p className='text-[18px]'>{project.description}</p>
-                            </div>
-                        </div>
-                    </div>
-            ))} */}
         </div>
         <div className='w-full absolute top-[30%] bg-[#00d5ff34] left-0 h-[500px] -skew-y-12 ' />
         
