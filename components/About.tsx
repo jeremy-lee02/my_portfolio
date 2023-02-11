@@ -42,7 +42,7 @@ function About({info}: Props) {
         whileInView = {{opacity: 1, y:0}}
         viewport = {{once:true}}
         className='space-y-10 px-0 md:px-10 md:mt-7 mt-[100px]'>
-            <p className='text-base tracking-[2px]'>{info?.backgroundInfo}</p>
+            <p className='font-light tracking-[1px]'>{info?.backgroundInfo}</p>
         </motion.div>
     </motion.div>
   )

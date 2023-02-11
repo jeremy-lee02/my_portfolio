@@ -12,7 +12,7 @@ type Props = {
 function projects({projects}: Props) {
   return (
     <div>
-      <h3 className='uppercase tracking-[20px] text-gray-400 text-2xl text-center pt-10'>Projects</h3>
+      <h3 className='uppercase tracking-[20px] text-white text-2xl text-center pt-10'>Projects</h3>
       <Projects projects={projects} />
     </div>
   )

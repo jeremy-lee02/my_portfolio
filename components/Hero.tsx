@@ -37,7 +37,7 @@ function Hero({pageInfo, socials}: Props) {
         <img className='relative rounded-full h-40 w-40 mx-auto object-cover'
             src={urlFor(pageInfo?.heroImage).url()} />
         <div>
-            <h2 className='text-2xl uppercase text-gray-400 tracking-[20px] pb-5'>{pageInfo?.name}</h2>
+            <h2 className='text-2xl uppercase text-white font-thin tracking-[20px] pb-5'>{pageInfo?.name}</h2>
             <h1 className='text-4xl lg:text-5xl font-semibold'>
                 <span className='tracking-[3px]'>{text}</span>
                 <Cursor cursorColor='#FFFFFF' />
@@ -47,7 +47,7 @@ function Hero({pageInfo, socials}: Props) {
                     <SocialIcon 
                     key={item._id}
                     url= {item.url} 
-                    fgColor='gray'
+                    fgColor='white'
                     bgColor='transparent' />
                 ))}
             </div>

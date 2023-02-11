@@ -11,7 +11,7 @@ type Props = {
 function skills({skills}: Props) {
   return (
     <div>
-      <h3 className='uppercase tracking-[20px] text-gray-400 text-2xl text-center pt-10'>Skills</h3>
+      <h3 className='uppercase tracking-[20px] text-white text-2xl text-center pt-10'>Skills</h3>
       <Skills skills={skills} />
     </div>
   )

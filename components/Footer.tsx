@@ -35,17 +35,17 @@ function Footer({info}: Props) {
     className='flex lg:justify-evenly lg:items-center items-center justify-center text-white text-left mx-auto z-0 py-[30px] px-[32px] flex-wrap'>
         <div className='flex lg:flex-row lg:gap-10 flex-col gap-5 '>
             <div className='flex items-center gap-3 justify-center'>
-                <PhoneIcon className='h-7 w-7 animate-pulse text-gray-500' />
+                <PhoneIcon className='h-7 w-7 animate-pulse text-gray-700' />
                 <p className='tracking-[2px]'>{info?.phone}</p>
             </div>
             <div className='flex items-center space-x-5 justify-center '>
-                <MapPinIcon className='h-7 w-7 animate-pulse text-gray-500 '  />
+                <MapPinIcon className='h-7 w-7 animate-pulse text-gray-700 '  />
                 <p className='tracking-[2px]'>{info?.address}</p>
             </div>
             <div className='flex items-center space-x-2 justify-center '>
-                <EnvelopeIcon className='h-7 w-7 animate-pulse text-gray-500'  />
+                <EnvelopeIcon className='h-7 w-7 animate-pulse text-gray-700'  />
                 <p className='tracking-[2px]'>{info?.email}</p>
-                <ClipboardIcon className='h-4 w-4 cursor-pointer hover:text-white text-gray-500' onClick={()=> copy(info?.email)} />
+                <ClipboardIcon className='h-4 w-4 cursor-pointer hover:text-white text-gray-700' onClick={()=> copy(info?.email)} />
             </div>
         </div>
     </motion.footer>

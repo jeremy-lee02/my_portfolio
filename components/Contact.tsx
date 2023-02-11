@@ -14,17 +14,17 @@ function Contact({info}: Props) {
     <div className='flex justify-center items-center text-white mx-auto pt-[30px]'>
         <div className='flex flex-col gap-20'>
             <div className='flex items-center space-x-5 justify-center'>
-                <PhoneIcon className='md:h-9 md:w-9 h-7 w-7 animate-pulse text-gray-500' />
+                <PhoneIcon className='md:h-9 md:w-9 h-7 w-7 animate-pulse text-gray-700' />
                 <p className='tracking-[3px] md:text-xl'>{info?.phone}</p>
             </div>
             <div className='flex items-center space-x-5 justify-center'>
-                <MapPinIcon className='md:h-9 md:w-9 h-7 w-7 animate-pulse text-gray-500 '  />
+                <MapPinIcon className='md:h-9 md:w-9 h-7 w-7 animate-pulse text-gray-700 '  />
                 <p className='tracking-[3px] md:text-xl'>{info?.address}</p>
             </div>
             <div className='flex items-center space-x-2 justify-center'>
-                <EnvelopeIcon className='md:h-9 md:w-9 h-7 w-7 animate-pulse text-gray-500'  />
+                <EnvelopeIcon className='md:h-9 md:w-9 h-7 w-7 animate-pulse text-gray-700'  />
                 <p className='tracking-[3px] md:text-xl'>{info?.email}</p>
-                <ClipboardIcon className='h-5 w-5 cursor-pointer hover:text-white text-gray-500' onClick={()=> copy(info?.email)} />
+                <ClipboardIcon className='h-5 w-5 cursor-pointer hover:text-white text-gray-700' onClick={()=> copy(info?.email)} />
             </div>
         </div>
     </div>

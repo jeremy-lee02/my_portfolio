@@ -25,7 +25,7 @@ function about({pageInfo}: Props) {
                 opacity: 1,
                 x: 0
             }}
-        className='uppercase tracking-[20px] text-gray-400 text-2xl text-center pt-10'>About</motion.h3>
+        className='uppercase tracking-[20px] text-white text-2xl text-center pt-10'>About</motion.h3>
         <About info = {pageInfo} />
     </div>
   )
