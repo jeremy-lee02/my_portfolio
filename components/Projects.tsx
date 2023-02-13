@@ -27,9 +27,9 @@ function Projects({projects}: Props) {
                                     <span className='cursor-pointer hover:text-[#00d5ff]'> {project.projectName}</span> 
                                 </Link>
                         </h4>
-                        <div className='w-screen snap-center flex md:flex-row flex-col space-y-5 items-center justify-center px-16 h-full'>
+                        <div className='w-screen snap-center flex md:flex-row flex-col space-y-5 items-center justify-center px-16 h-full '>
                             <img src= {urlFor(project.skillImage).url()} width={300} height={370} alt=""  className='max-w-full' />
-                            <div className='px-0 md:px-8 max-w-2xl h-1/2 overflow-y-auto'>
+                            <div className='px-0 md:px-8 max-w-2xl h-1/2 overflow-y-auto project-container'>
                                 <p className='text-[18px]'>{project.description}</p>
                             </div>
                         </div>

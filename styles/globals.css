@@ -38,6 +38,27 @@ overflow-x: hidden;
     background: #00000065;
 }
 
+
+
+/* Project scrollbar */
+.project-container::-webkit-scrollbar{
+    margin-left: 10px;
+    width: 8px;
+}
+.project-container::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px rgba(119, 117, 117, 0); 
+    cursor: pointer;
+}
+.project-container::-webkit-scrollbar-thumb{
+    background: white;
+    width: 100%;
+    min-height: 8px;
+    border-radius: 5px;
+}
+.project-container::-webkit-scrollbar-thumb:hover{
+    background: #00000065;
+}
+
 @media screen and (max-width: 768px) {
     .app-container::-webkit-scrollbar{
         margin-left: 10px;
